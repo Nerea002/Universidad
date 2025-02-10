@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+void juego(int disk, int t1, int t2, int t3){
+    if(disk == 1){
+        cout<<"Mover disco de la torre "<<t1<<" hacia la torre "<<t3<<endl;
+    }else{
+        juego(disk-1,t1,t3,t2);
+        cout<<"Mover disco de la torre "<<t1<<" hacia la torre "<<t3<<endl;
+        juego(disk-1,t2,t1,t3);
+    }
+}
+
+int main(){
+    int t1 = 1, t2 = 2, t3 = 3, disk = 0;
+    cout<<"¿Con cuantos discos quiere jugar? ";
+    cin>>disk;
+    juego(disk,t1,t2,t3);
+
+    return 0;
+}
