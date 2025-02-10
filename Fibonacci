@@ -1,0 +1,20 @@
+#include <estdlib>
+#include <stdio.h>
+
+using namespace std;
+
+int num=1;
+int ant=1;
+int aux;
+
+int main() {
+    for(int i = 0; i <20; i++){
+		printf("%d, ", num);
+		aux = num;
+		num += anterior;
+		anterior = aux;
+	}
+	
+
+	return num;
+}
